@@ -8,7 +8,8 @@ $ sudo gem install cocoapods
 
 **Podfile**  To integrate ConnectAd into your Xcode project using CocoaPods, specify it in your Podfile:
 ```
-pod 'ConnectAd'
+pod 'ConnectAd', :git => 'https://github.com/connsdkimpl/ConnectAd.git'
+
 ```
 
 Then, run the following command:
