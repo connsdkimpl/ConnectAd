@@ -19,7 +19,7 @@ extension ConnectInterstitialView {
     let closeButton = UIButton(frame: CGRect(x: UIScreen.main.bounds.width - buttonSize - buttonSize/2, y: 20, width: buttonSize, height: buttonSize))
 
     let frameworkBundle = Bundle(for: ConnectInterstitialView.self)
-    let bundleURL = frameworkBundle.resourceURL?.appendingPathComponent("ConnectedSDK_ObjC.bundle")
+    let bundleURL = frameworkBundle.resourceURL?.appendingPathComponent("ConnectAd.bundle")
     let resourceBundle = Bundle(url: bundleURL!)
     let image = UIImage(named: "exit", in: resourceBundle, compatibleWith: nil)
     closeButton.setImage(image, for: .normal)
