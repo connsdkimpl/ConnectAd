@@ -63,7 +63,6 @@ extension ConnectAdRewarded {
       rewardedAdUnitId = adUnitId
     }
     let request = GADRequest()
-    GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["e5a6cda6c02ed05bf125bc2d310e7740"]
     GADRewardBasedVideoAd.sharedInstance().delegate = self
     GADRewardBasedVideoAd.sharedInstance().load(request, withAdUnitID: rewardedAdUnitId)
   }

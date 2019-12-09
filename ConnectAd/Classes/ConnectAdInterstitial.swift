@@ -89,7 +89,6 @@ extension ConnectAdInterstitial {
     if let adMobConnectId = self.adMobConnectIds.first, let interstitial = adMobInterstitials.filter({ $0.connectedId == adMobConnectId }).first, let adUnitId = interstitial.adUnitId {
       interstitialAdUnitId = adUnitId
     }
-    GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["e5a6cda6c02ed05bf125bc2d310e7740"]
     adMobInterstitial = GADInterstitial(adUnitID: interstitialAdUnitId)
     adMobInterstitial.delegate = self
     adMobInterstitial.load(GADRequest())
