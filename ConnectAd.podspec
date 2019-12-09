@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ConnectAd'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'ConnectAd for iOS.'
   s.description      = 'This pod is used for integrating ConnectAd in Swift iOS projects.'
 
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source_files = 'ConnectAd/**/*.{h,m,swift,png}'
   s.exclude_files = 'ConnectAd/**/*.plist'
   s.resource_bundles = {
-    'ConnectAd' => ['ConnectAd/Assets/*']
+    'ConnectAd' => ['ConnectAd/Assets/*.png']
   }
 
   s.static_framework = true
