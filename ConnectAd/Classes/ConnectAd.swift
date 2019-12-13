@@ -48,10 +48,9 @@ public protocol ConnectAdBannerDelegate{
 public protocol ConnectAdRewardedDelegate{
   func onRewardFail(adType: AdType, error: Error)
   func onRewardVideoClicked(_ adType: AdType)
-  func onRewardedVideoCompleted(_ adType: AdType)
   func onRewardVideoClosed(_ adType: AdType)
   func onRewardVideoStarted(_ adType: AdType)
-  func onRewarded(adType: AdType, rewardItem: ConnectAdReward)
+  func onRewardedVideoCompleted(adType: AdType, rewardItem: ConnectAdReward)
 }
 public protocol ConnectAdInterstitialDelegate{
   func onInterstitialFailed(adType: AdType, error: Error)

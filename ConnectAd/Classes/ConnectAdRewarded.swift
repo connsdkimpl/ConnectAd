@@ -80,7 +80,7 @@ extension ConnectAdRewarded {
 
 extension ConnectAdRewarded: GADRewardBasedVideoAdDelegate {
   public func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
-    self.delegate.onRewarded(adType: self.adType, rewardItem: reward)
+    self.delegate.onRewardedVideoCompleted(adType: self.adType, rewardItem: reward)
   }
   public func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd:GADRewardBasedVideoAd) {
     if GADRewardBasedVideoAd.sharedInstance().isReady == true {
@@ -90,11 +90,6 @@ extension ConnectAdRewarded: GADRewardBasedVideoAdDelegate {
   public func rewardBasedVideoAdDidStartPlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
     self.delegate.onRewardVideoStarted(self.adType)
   }
-
-  public func rewardBasedVideoAdDidCompletePlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
-    self.delegate.onRewardedVideoCompleted(self.adType)
-  }
-
   public func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
     self.delegate.onRewardVideoClosed(self.adType)
   }
@@ -168,10 +163,7 @@ extension ConnectAdRewarded: MPRewardedVideoDelegate {
     self.delegate.onRewardVideoClosed(self.adType)
   }
   public func rewardedVideoAdShouldReward(forAdUnitID adUnitID: String!, reward: MPRewardedVideoReward!) {
-    self.delegate.onRewarded(adType: self.adType, rewardItem: reward)
-  }
-  public func rewardedVideoAdDidExpire(forAdUnitID adUnitID: String!) {
-    self.delegate.onRewardedVideoCompleted(self.adType)
+    self.delegate.onRewardedVideoCompleted(adType: self.adType, rewardItem: reward)
   }
   public func rewardedVideoAdDidReceiveTapEvent(forAdUnitID adUnitID: String!) {
     self.delegate.onRewardVideoClicked(self.adType)

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ConnectAd'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'ConnectAd for iOS.'
   s.description      = 'This pod is used for integrating ConnectAd in Swift iOS projects.'
 
